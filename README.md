@@ -1,6 +1,6 @@
 
 
-# Vivaldi Auto Mod
+# [Vivaldi Auto Mod](https://github.com/EvilSpark/VivaldiAutoMod)
 
  - ### Mods collected from various places into one place. 
  -  ### Automated Installation of Mods after installing the browser.
@@ -10,7 +10,7 @@
 1. Find the file called `Patch.sh`
 2. At line 10, you will find the variable `currentDir`.
 3. It will look like this `currentDir='/home/evilspark/Codes/VivaldiAutoMod'`.
-4. Get current path by typing `pwd`, then change the path accordingly.
+4. Get current path by typing `pwd`, then change the `currentDir` accordingly.
 5. Open current path in the terminal and run the script by these commands
 	- `chmod +x Patch.sh` (This will make the file executable).
 	 - `sudo ./Patch.sh`
@@ -41,10 +41,12 @@
  
  
 ### Want to add more mods?
-Ping me on Vivaldi Forums - [EvilSpark](https://forum.vivaldi.net/user/evilspark) or send a pull request.
+Ping me on Vivaldi Forums - [EvilSpark](https://forum.vivaldi.net/user/evilspark) or create a pull request.
 
 
 
 #### Notes- 
 - Only tested on Ubuntu 20.04 but should work for all Linux.
 -   [ ] Support current path making it fully automated.
+
+
