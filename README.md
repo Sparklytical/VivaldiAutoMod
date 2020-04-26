@@ -29,3 +29,9 @@
 2. [Justdanpo](https://github.com/justdanpo/VivaldiHooks)
  3. [GwenDragon](https://forum.vivaldi.net/user/gwen-dragon)
  and many more.
+ 
+ 
+ ### Last tested on - 
+ #### Snapshot -  Tested on Vivaldi	3.0.1874.27 (Official Build) (64-bit)
+#### Stable - Vivaldi	3.0.1874.23 (Stable channel) (64-bit)
+ 
