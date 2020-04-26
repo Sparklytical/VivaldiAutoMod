@@ -1,0 +1,76 @@
+/* find bar */
+.active.visible.webpageview .find-in-page {
+  position: absolute;
+  bottom: -1px;
+  z-index: 1;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  max-width: fit-content;
+  border-radius: calc(var(--radius) * 1.3);
+  padding-left: 6px;
+}
+
+.find-in-page .fip-input-label {
+  display: none;
+}
+
+.find-in-page>label:not(:hover) .fip-checkbox-label {
+  font-size: 0;
+  padding: .5px;
+}
+
+.find-in-page .fip-checkbox-label {
+  font-size: 80%;
+  transition: font-size .15s !important;
+}
+
+.find-in-page>.toolbar.toolbar-group button svg {
+  transform: rotate(90deg);
+}
+
+.find-in-page>.button-toolbar button {
+  fill: crimson;
+}
+
+.find-in-page>.button-toolbar button:hover {
+  fill: beige;
+  background: crimson;
+  box-shadow: 0 0 0 1.5px beige inset;
+}
+
+/* compact mode */
+.active.visible.webpageview .find-in-page:not(:focus-within):not(:hover) {
+  opacity: .5;
+  visibility: hidden;
+}
+
+.active.visible.webpageview .find-in-page :is(input[type="search"], .fip-results) {
+  visibility: visible;
+}
+
+/* nomatch alert */
+.find-in-page.fip-nomatches:focus-within input[type="search"] {
+  color: maroon;
+  background: pink;
+  transition: 0s .15s !important;
+}
+
+.find-in-page.fip-nomatches:focus-within {
+  animation: jump 1.3s steps(2) .15s 4 !important;
+}
+
+@keyframes jump {
+  8% {
+    transform: translateY(0);
+  }
+
+  1%,
+  5% {
+    transform: translateY(5px);
+  }
+
+  3% {
+    transform: translateY(-4px);
+  }
+}

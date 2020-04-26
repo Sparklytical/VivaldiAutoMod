@@ -1,0 +1,61 @@
+/**
+* Domain Only (a mod for vivaldi)
+* LonM
+* For other languages, replace "Site info" with whatever your locale string is
+*/
+
+div.addressfield > button[title="Site info"] + form:not([data-url=""]) input.url.vivaldi-addressfield:not(:focus):not(:focus-within):not(:hover){
+    opacity: 0;
+}
+div.addressfield > button[title="Site info"] + form:not([data-url=""]) input.url.vivaldi-addressfield:hover,
+div.addressfield > button[title="Site info"] + form:not([data-url=""]) input.url.vivaldi-addressfield:focus,
+div.addressfield > button[title="Site info"] + form:not([data-url=""]) input.url.vivaldi-addressfield:focus-within{
+    opacity: 1;
+    background: var(--colorBgLight);
+}
+.animation-on div.addressfield > button[title="Site info"] + form:not([data-url=""]) input.url.vivaldi-addressfield {
+   transition: all 0.3s ease;
+}
+.animation-on div.addressfield > button[title="Site info"] + form:not([data-url=""]) input.url.vivaldi-addressfield:hover {
+   transition-delay: 0.3s;
+}
+.animation-on div.addressfield > button[title="Site info"] + form:not([data-url=""]) input.url.vivaldi-addressfield:focus,
+.animation-on div.addressfield > button[title="Site info"] + form:not([data-url=""]) input.url.vivaldi-addressfield:focus-within {
+   transition: none;
+}
+.private div.addressfield > button[title="Site info"] + form:not([data-url=""]) input.url.vivaldi-addressfield:focus,
+.private div.addressfield > button[title="Site info"] + form:not([data-url=""]) input.url.vivaldi-addressfield:focus-within{
+    background: var(--colorFgIntense);
+}
+div.addressfield > div.progressing + button[title="Site info"] + form:not([data-url=""]) input.url.vivaldi-addressfield:focus,
+div.addressfield > div.progressing + button[title="Site info"] + form:not([data-url=""]) input.url.vivaldi-addressfield:focus-within,
+.private div.addressfield > div.progressing + button[title="Site info"] + form:not([data-url=""]) input.url.vivaldi-addressfield:focus,
+.private div.addressfield > div.progressing + button[title="Site info"] + form:not([data-url=""]) input.url.vivaldi-addressfield:focus-within{
+    background: transparent;
+}
+
+div.addressfield > button[title="Site info"] + form:before {
+    content: attr(data-url);
+    width: calc(100% - 88px);
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    cursor: text;
+    margin: 0px 0px 0px 44px;
+    height: 100%;
+    line-height: 1.8;
+    border-radius: 0px var(--radius) var(--radius) 0px;
+}
+
+div.addressfield > div.progressing + button[title="Site info"] + form:focus:before,
+div.addressfield > div.progressing + button[title="Site info"] + form:focus-within:before {
+    display: none;
+}
+
+div.addressfield > button.insecure[title="Site info"] + form:before {
+    background: #f30;
+    color: white;
+}

@@ -1,0 +1,5 @@
+/* Use Dark BG Background tabs */
+#browser.color-behind-tabs-on .tab-position .tab.active.active {
+  background-color: var(--colorAccentBgDarker);
+  color: var(--colorFg);
+}

@@ -1,0 +1,4 @@
+.manager .manager-treeview div>div:nth-child(even),
+.startpage .history .manager-content .history-tree div>div:nth-child(even) {
+  background-color: var(--colorBgDark);
+}

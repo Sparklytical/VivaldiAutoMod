@@ -1,0 +1,34 @@
+/* Adds transition to the window accent */
+.color-behind-tabs-on#browser.address-off.tabs-off.bookmark-bar-off #header {
+  transition: background-color 0.7s, border-color 0.7s;
+}
+
+#browser.color-behind-tabs-on {
+  transition: background-color 0.7s, border-color 0.7s;
+}
+
+/* Adds transition to address accent */
+#browser:not(.tabs-top) #header {
+  transition: background-color 0.7s;
+}
+
+#browser.color-behind-tabs-off:not(.tabs-top) {
+  transition: background-color 0.7s;
+}
+
+.color-behind-tabs-off .toolbar-mainbar {
+  transition: background-color 0.7s;
+}
+
+.color-behind-tabs-off.address-top .toolbar-mainbar:after {
+  transition: background-color 0.7s;
+}
+
+.color-behind-tabs-off.address-bottom .toolbar-mainbar {
+  transition: background-color 0.7s, box-shadow 0.7s;
+}
+
+.color-behind-tabs-off #tabs-container.top,
+.color-behind-tabs-off #tabs-container.bottom {
+  transition: border-color 0.7s;
+}

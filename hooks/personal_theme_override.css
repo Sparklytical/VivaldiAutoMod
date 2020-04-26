@@ -1,0 +1,22 @@
+#browser.theme-light {
+    background: url("../resources/bg.jpg");
+    background-size: cover;
+}
+
+#browser.theme-dark {
+    background: url("../resources/bg_alt_7.jpg");
+    background-size: cover;
+}
+
+#tabs-container, .inner, #main, .vivaldi-settings .settings-content, .startpage, .startpage .manager {
+    background: transparent !important;
+}
+
+.tab.active, .toolbar-addressbar, #switch, #footer, .vivaldi-settings, .vivaldi-settings .settings-sidebar, .startpage .manager > div {
+    background:  var(--colorBgAlpha) !important;
+    background-color:  var(--colorBgAlpha) !important;
+}
+
+.private-intro {
+    background: var(--colorBgAlphaHeavy);
+}
