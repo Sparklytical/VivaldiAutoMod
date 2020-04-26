@@ -3,7 +3,7 @@
 # Vivaldi Auto Mod
 
  - ### Mods collected from various places into one place. 
- -  ### Automated Installation of Mods after installting the browser.
+ -  ### Automated Installation of Mods after installing the browser.
 
 ## Installing the mods
 
@@ -11,7 +11,7 @@
 2. At line 10, you will find the variable `currentDir`.
 3. It will look like this `currentDir='/home/evilspark/Codes/VivaldiAutoMod'`.
 4. Get current path by typing `pwd`, then change the path accordingly.
-5. Open current path in terminal and run the script by these commands
+5. Open current path in the terminal and run the script by these commands
 	- `chmod +x Patch.sh` (This will make the file executable).
 	 - `sudo ./Patch.sh`
 
@@ -21,8 +21,8 @@
 
 
 ## Features - 
-- No need to remove the mods you do not need from the `Mods` folder. Just install it and in settings you will find the option to disable the mods you do not want or the one you want.
-- Since you might find all mods activated at once in first start, disable them all, restart browser then enable then one by one.
+- No need to remove the mods you do not need from the `Mods` folder. Just install it and in settings, you will find the option to disable the mods you do not want or the one you want.
+- Since you might find all mods activated at once in the first start, disable them all, restart browser then enable then one by one.
 
 ![enter image description here](https://github.com/EvilSpark/VivaldiAutoMod/blob/master/image.png?raw=true)
 
@@ -46,5 +46,5 @@ Ping me on Vivaldi Forums - [EvilSpark](https://forum.vivaldi.net/user/evilspark
 
 
 #### Notes- 
-- Only tested on Ubuntu 20.04 but should work for all linux.
+- Only tested on Ubuntu 20.04 but should work for all Linux.
 -   [ ] Support current path making it fully automated.
