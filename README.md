@@ -1,4 +1,5 @@
 
+
 # Vivaldi Auto Mod
 
  - ### Mods collected from various places into one place. 
@@ -41,3 +42,9 @@
  
 ### Want to add more mods?
 Ping me on Vivaldi Forums - [EvilSpark](https://forum.vivaldi.net/user/evilspark) or send a pull request.
+
+
+
+#### Notes- 
+- Only tested on Ubuntu 20.04 but should work for all linux.
+-   [ ] Support current path making it fully automated.
