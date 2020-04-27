@@ -47,6 +47,9 @@ Ping me on Vivaldi Forums - [EvilSpark](https://forum.vivaldi.net/user/evilspark
 
 #### Notes- 
 - Only tested on Ubuntu 20.04 but should work for all Linux.
--   [ ] Support current path making it fully automated.
+  
+#### TODO- 
+  [ ] Support current path making it fully automated.
+  [ ] Option to correctly edit browser.html than replacing it.
 
 
