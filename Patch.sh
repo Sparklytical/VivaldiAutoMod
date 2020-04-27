@@ -7,7 +7,7 @@
 # Snapshot -  Tested on Vivaldi	3.0.1874.27 (Official Build) (64-bit)
 # Stable - Vivaldi	3.0.1874.23 (Stable channel) (64-bit)
 ###############################################################
-currentDir='/home/evilspark/Codes/VivaldiAutoMod'
+currentDir="$(pwd)"
 
 function checkRoot() {
     if [ $UID -ne 0 ]; then
