@@ -72,7 +72,8 @@ function patchVivaldi() {
                 
 
         #Patch browser.html
-        #sed 29 -e 's/<\/body>/  <script src="hooks.js"><\/script>\n  <\/body>/' "$targetDir/resources/vivaldi/browser.html"
+       # sed -i -e 's/<\/body>/  <script src="hooks.js"><\/script>\n  <\/body>/' "$targetDir/resources/vivaldi/browser.html"
+
 
         echo -e "\nVivaldi patched successfully!"
     else

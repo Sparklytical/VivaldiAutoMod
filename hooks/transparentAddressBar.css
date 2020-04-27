@@ -1,0 +1,25 @@
+/* Make Background of Address Bar transparent and remove borders/box-shadow */
+
+.addressfield, .searchfield,
+.addressfield:active {
+    border: 0 none !important;
+    background-color: transparent !important;   
+}
+
+.addressfield:focus-within,
+.searchfield:focus-within{
+    border: 0 none !important;
+    box-shadow: none !important;
+    
+}
+
+/* Change the look of the address bar in private windows */
+.private .toolbar-addressbar .addressfield, .private .toolbar-addressbar .searchfield {
+    background-color: #662d4b !important;
+    color: #fff !important;
+}
+
+
+/* Make background of web panel favicons transparent */
+
+#switch button.webviewbtn img { background-color: transparent !important; }

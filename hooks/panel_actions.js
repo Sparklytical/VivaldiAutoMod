@@ -11,7 +11,7 @@
     "use strict";
 
     const ZOOM_STEP = 0.05; /*Step amount. 0.05 is 5%*/
-    const DEFAULT_ZOOM = 0.7; /* the default zoom % for webpanels; 0.7 equates to 70%, 1 to 100% */
+    const DEFAULT_ZOOM = 1; /* the default zoom % for webpanels; 0.7 equates to 70%, 1 to 100% */
 	const DEFAULT_ZOOM_LBL = DEFAULT_ZOOM * 100; /* the default zoom label based on the default zoom */
 
     /*
