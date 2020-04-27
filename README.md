@@ -1,5 +1,6 @@
 
 
+
 # [Vivaldi Auto Mod](https://github.com/EvilSpark/VivaldiAutoMod)
 
  - ### Mods collected from various places into one place. 
@@ -49,7 +50,9 @@ Ping me on Vivaldi Forums - [EvilSpark](https://forum.vivaldi.net/user/evilspark
 - Only tested on Ubuntu 20.04 but should work for all Linux.
   
 #### TODO- 
-  [ ] Support current path making it fully automated.
-  [ ] Option to correctly edit browser.html than replacing it.
+-   [ ] Support current path making it fully automated.
+-   [ ] Option to correctly edit browser.html than replacing it.
+
+
 
 
