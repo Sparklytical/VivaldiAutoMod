@@ -66,13 +66,13 @@ function patchVivaldi() {
         cp $targetDir/resources/vivaldi/browser.html $targetDir/resources/vivaldi/browser-$(date +%Y-%m-%dT%H-%M-%S).html
         
         #Copy mod files
-                cp browser.html $targetDir/resources/vivaldi/
+                # cp browser.html $targetDir/resources/vivaldi/
                 cp hooks.js $targetDir/resources/vivaldi/
                 cp -r $currentDir/hooks $targetDir/resources/vivaldi/
                 
 
         #Patch browser.html
-       # sed -i -e 's/<\/body>/  <script src="hooks.js"><\/script>\n  <\/body>/' "$targetDir/resources/vivaldi/browser.html"
+        sed -i '/src="bundle.js"/i \ \ \ \ <script src="hooks.js"></script>' "$targetDir/resources/vivaldi/browser.html"
 
 
         echo -e "\nVivaldi patched successfully!"
