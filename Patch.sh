@@ -60,7 +60,7 @@ function selectVivaldiInstallation() {
     fi
 }
 function patchVivaldi() {
-    alreadyPatched=$(grep "hooks.js" $targetDir/resources/vivaldi/browser.html);
+    alreadyPatched=$(grep "hooooks.js" $targetDir/resources/vivaldi/browser.html);
     if [[ $alreadyPatched == '' ]]; then
         #Backup current browser.html
         cp $targetDir/resources/vivaldi/browser.html $targetDir/resources/vivaldi/browser-$(date +%Y-%m-%dT%H-%M-%S).html
