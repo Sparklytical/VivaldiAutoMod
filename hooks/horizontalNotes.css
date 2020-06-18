@@ -1,0 +1,63 @@
+.NotesManager { flex-direction: row !important; }
+
+.NotesManager-Toolbar, .NotesManager-Buttons { background-color: var(--colorBgDark) !important; }
+
+.NotesManager-Buttons { border-bottom: 1px solid var(--colorBgDarker); }
+
+.NotesManager-RenderMarkdownButton { display: none !important; }
+
+.NotesManager-Tree > .toolbar-default {
+  background-color: var(--colorBgDark);
+  padding-left: 5%;
+  margin-left: 0 !important;
+  height: 40px;
+}
+
+.NotesManager-Tree {
+  max-height: 100% !important;
+  flex-basis: 25vw !important;
+  border-right: 1px solid var(--colorBgDarker)
+}
+
+.NotesManager-Footer {
+  position: absolute;
+  grid-area: unset !important;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  bottom: 4px;
+  opacity: 1 !important;
+}
+
+.NotesManager-WordCount {
+  background-color: var(--colorHighlightBg);
+  color: var(--colorHighlightFg);
+  padding: 10px 25px;
+  border-radius: var(--radius);
+}
+
+.toolbar-default .button-toolbar > button { background-image: linear-gradient(var(--colorBgLight), var(--colorBg)) !important; }
+
+.toolbar-default .button-toolbar > button.button-pressed { background-image: linear-gradient(var(--colorHighlightBg), var(--colorHighlightBgDark)) !important; }
+
+.toolbar-default .button-toolbar > button.button-pressed:active { background-image: linear-gradient(var(--colorBgDark), var(--colorBgDark)) !important; }
+
+.toolbar-default .button-toolbar > button:hover { background-color: var(--colorBgDark) !important; fill: var(--colorHighlightBg) !important; }
+
+.toolbar-default .button-toolbar > button.button-pressed {
+  fill: var(--colorHighlightFg) !important;
+  color: var(--colorHighlightFg);
+}
+
+.manager .manager-content, .vivaldi-tree, .manager>.toolbar, .startpage .history .more-info {
+  background-color: var(--colorBgDark) !important;
+  opacity: .98;
+  backdrop-filter: blur(10px)
+}
+
+/* Creates alternating row colors */
+.vivaldi-tree div>div:nth-child(even), .manager .manager-treeview div>div:nth-child(even), .startpage .history .manager-content .history-tree div>div:nth-child(even) { background-color: var(--colorBg); }
+
+.manager .manager-editor {border: none !important}
+
+.panel#downloads .download-item .file, .panel#downloads .download-item .file .size { background-color: transparent; }
