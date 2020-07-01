@@ -1,7 +1,8 @@
 //Move Minimize/Zoom/Close buttons to addressbar when Vivaldi is maximized and tab position is NOT "Top"
 
 vivaldi.jdhooks.addStyle(`
-#browser:not(.native):not(.horizontal-menu):not(.tabs-top).maximized #header { display: none; }
+#browser:not(.popup):not(.horizontal-menu):not(.tabs-top).maximized #header,
+#browser:not(.popup):not(.horizontal-menu):not(.tabs-top).native #header { display: none; }
 
 #browser.horizontal-menu .MaximizedWindowButtons,
 #browser.tabs-top .MaximizedWindowButtons,
@@ -15,8 +16,11 @@ vivaldi.jdhooks.addStyle(`
 
 #vivaldi-button-moved {
     order: -1;
+    display: none;
 }
 
+#browser:not(.horizontal-menu):not(.tabs-top).maximized #vivaldi-button-moved,
+#browser:not(.horizontal-menu):not(.tabs-top).native #vivaldi-button-moved { display: initial; }
 
 
 /* copypasted from common.css, "#header #titlebar .window-buttongroup" replaced with ".MaximizedWindowButtons" */
@@ -65,8 +69,6 @@ vivaldi.jdhooks.hookClass("urlfield_UrlBar", oldClass => {
     const ToolbarButton = vivaldi.jdhooks.require("toolbars_ToolbarButton")
 
     class newClass extends oldClass {
-        constructor(...e) { super(...e) }
-
         vivaldiButtonClick(event) {
             const rect = event.target.getBoundingClientRect()
             const props = {
@@ -85,7 +87,7 @@ vivaldi.jdhooks.hookClass("urlfield_UrlBar", oldClass => {
         render() {
             let ret = super.render()
 
-            let iconClose, iconMinimize, iconZoom;
+            let iconClose, iconMinimize, iconZoom
 
             const platform = window.navigator.platform.indexOf("Linux") >= 0 ?
                 "linux" :
@@ -101,12 +103,12 @@ vivaldi.jdhooks.hookClass("urlfield_UrlBar", oldClass => {
                     iconClose = vivaldi.jdhooks.require("_svg_window_close")
                     iconMinimize = vivaldi.jdhooks.require("_svg_window_minimize")
                     iconZoom = vivaldi.jdhooks.require("_svg_window_zoom")
-                    break;
+                    break
                 case "win10":
                     iconClose = vivaldi.jdhooks.require("_svg_window_close_win10")
                     iconMinimize = vivaldi.jdhooks.require("_svg_window_minimize_win10")
                     iconZoom = vivaldi.jdhooks.require("_svg_window_zoom_win10")
-                    break;
+                    break
                 case "mac":
                     iconClose = vivaldi.jdhooks.require("_svg_window_close_mac")
                     iconMinimize = vivaldi.jdhooks.require("_svg_window_minimize_mac")
@@ -131,7 +133,7 @@ vivaldi.jdhooks.hookClass("urlfield_UrlBar", oldClass => {
 
             ret.props.children.push(
                 React.createElement("div", {
-                    className: "toolbar toolbar-mainbar MaximizedWindowButtons",
+                    className: "toolbar toolbar-mainbar",
                     id: "vivaldi-button-moved"
                 },
                     React.createElement(ToolbarButton, {

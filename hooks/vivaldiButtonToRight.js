@@ -14,6 +14,7 @@
         btn.setAttribute('tabindex', '-1');
         var bar = document.querySelector(".toolbar-addressbar");
         var div = document.createElement('div');
+        setTimeout(wait, 300);
         div.classList.add('button-toolbar');
         bar.appendChild(div);
         div.appendChild(btn);

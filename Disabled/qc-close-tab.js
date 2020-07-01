@@ -24,9 +24,53 @@ vivaldi.jdhooks.hookClass("quickCommands_QuickCommandSearch", cls => {
 		constructor(...e) {
 			super(...e)
 			this.jdUpdateTabs()
+
+			this.qcInitialFocus = document.activeElement
+			this.qcFocusLost = false
+
+			const old_onKeyDown = this.onKeyDown
+			this.onKeyDown = (e => {
+				if (e.shiftKey && e.key == "Delete") {
+					const item = this.state.renderedArray[this.qclist.getSelectedIndex()]
+					if (item.jdOnTabClose) item.jdOnTabClose()
+					e.preventDefault()
+					e.stopPropagation()
+					return
+				}
+				return old_onKeyDown(e)
+			})
+
+			this.qcCloseSetFocusBack = this.qcCloseSetFocusBack.bind(this)
 		}
 
-		componentDidUpdate(prevProps, prevState, snapshot) { this.jdUpdateTabs() }
+		qcCloseSetFocusBack(evt) {
+			this.qcFocusLost = true
+			evt.target.focus()
+		}
+
+		componentDidMount() {
+			if (super.componentDidMount) super.componentDidMount()
+			this.refs.quickCommand.addEventListener("blur", this.qcCloseSetFocusBack)
+		}
+
+		componentWillUnmount() {
+			this.refs.quickCommand.removeEventListener("blur", this.qcCloseSetFocusBack)
+			if (super.componentWillUnmount) super.componentWillUnmount()
+
+			if (this.qcFocusLost) {
+				if (document.body.contains(this.qcInitialFocus)) {
+					this.qcInitialFocus.focus()
+				} else {
+					const activeWebView = document.querySelector(".active.webpageview webview")
+					if (activeWebView) activeWebView.focus()
+				}
+			}
+		}
+
+		componentDidUpdate(prevProps, prevState, snapshot) {
+			if (super.componentDidUpdate) super.componentDidUpdate(prevProps, prevState, snapshot)
+			this.jdUpdateTabs()
+		}
 	}
 	return qc
 })
@@ -36,8 +80,6 @@ vivaldi.jdhooks.hookClass("quickCommands_CommandItem", cls => {
 	const getLocalizedMessage = vivaldi.jdhooks.require("_getLocalizedMessage")
 
 	class qcItem extends cls {
-		constructor(...e) { super(...e) }
-
 		render() {
 			let r = super.render()
 
